@@ -1,0 +1,51 @@
+	Git:
+
+		使用git 进入D盘： cd d:
+		ls  查看
+	
+	Git:全局配置
+	查看当前的用户名：git cofig --global user.name
+	创建用户名：git cofig --global user.name XXX
+	查看当前的邮箱：git cofig --global user.email
+	创建邮箱： git cofig --global user.email XXX
+	配置秘钥：ssh-keygen -t rsa -C "你的githod邮箱"
+	github验证：ssh -T git@github.com
+
+git 本地提交操作：
+	echo "124">>1.txt   // 输出一行文字到 1.txt
+	git add 1.txt  // 添加1.txt到git缓存区
+	git commit -m "第一次提交"  // 指定提交并注释
+	git remote add origin git@github.com:Biancdk/git2.git
+	git push -u origin masters
+
+	第二次以及以后提交：
+	git add .
+	git commit -m "第二天"
+	git push
+
+
+分支：（master）
+		协同工作必须掌握;
+		分支的创建并切换:
+		git checkout -b branch01  // 让git 检出到branch01 -b 创建一个新的分支
+		git branch   // 查看当前已存在的分支
+		echo "分支工作">>3.txt
+		// 在当前分支继续工作， 注意文件命名不要冲突
+
+		git add .
+		git commit -m "分支提交"
+		git push // 会有代码提示：按代码提示写 F5刷新查看
+
+		分支合并： 另外一个分支的内容合并到此分支
+		git checkout branch01 // 首先切换到此分支
+		git merge dev // merge:合并 分支名称
+		git push // 直接推送  F5 刷新
+
+
+
+
+
+
+
+
+
